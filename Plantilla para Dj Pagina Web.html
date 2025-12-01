@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GohanOnTheTrack | Sitio Oficial</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>
+            <img class="header-logo"  
+                 src="img/gohan-logo.png"
+                 alt="GohanOnTheTrack Logo Gohan">
+        </h1>
+        <nav>
+            <ul> 
+                <li><a href="#bio">Biografía</a></li>
+                <li><a href="#media">Media</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#contacto">Contacto</a></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="bio">
+            <h2>Acerca de Johan Quiroz</h2>
+            <img class="dj-profile-pic" 
+                 src="img/dj-gohan.jpg"
+                 alt="GohanOnTheTrack pinchando en la consola">
+            <p>Johan Quiroz, conocido como **GohanOnTheTrack**, DJ y productor de Sonido...</p>
+    
+        </section>
+
+
+        
+        
+        <section id="media">
+            <h2>Música</h2>
+            
+            <iframe
+            width="100%" 
+            height="120"
+             scrolling="no" 
+             frameborder="no" 
+             allow="autoplay" 
+             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2121736374&color=%23524452&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+          
+            </iframe>
+            
+            <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                <a href="https://soundcloud.com/gohan-on-the-track" 
+                title="Gohan On The Track" 
+                target="_blank" 
+                style="color: #cccccc; text-decoration: none;">Gohan On The Track</a> 
+                 <a href="https://soundcloud.com/gohan-on-the-track/set-live-at-gohan-ec-room" 
+                 title="Set Live At @Gohan (Ec) - Room House" 
+                 target="_blank" 
+                 style="color: #cccccc; text-decoration: none;">Set Live At @Gohan (Ec) - Room House</a>
+                </div>
+            
+            
+            <h3 class="soundcloud-title">Aniversary GohanOnTheTrack Set </h3>
+          <iframe 
+                 width="100%" 
+                 height="120" 
+                 scrolling="no" 
+                 frameborder="no"
+                 allow="autoplay" 
+                 src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2200542123&color=%23524452&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+                </iframe>
+                <div style="font-size: 10px; color: #30043b;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                    <a href="https://soundcloud.com/gohan-on-the-track" 
+                          title="Gohan On The Track" 
+                          target="_blank" 
+                          style="color: #cccccc; text-decoration: none;">Gohan On The Track</a> 
+                          <a href="https://soundcloud.com/gohan-on-the-track/aniversary-1-gohan-set-2026-ecuador-portoviejo" 
+                            title="Aniversary #1  Gohan Set 2026 @Ecuador - Portoviejo" 
+                            target="_blank" 
+                            style="color: #cccccc; text-decoration: none;">Aniversary #1  Gohan Set 2026 @Ecuador - Portoviejo</a>
+                        </div>
+            <h4>Galería de Sesiones</h4>
+            <div class="image-gallery">
+                <img src="img/galeria/set-1.jpg" alt="GohanOnTheTrack en vivo set 1">
+                <img src="img/galeria/set-2.jpg" alt="GohanOnTheTrack en vivo set 2">
+                <img src="img/galeria/set-3.jpg" alt="GohanOnTheTrack en vivo set 3">
+            </div>
+        </section>
+
+
+
+        <section id="eventos">
+            <h2>Próximos Eventos</h2>
+            <ol> 
+                <li>**29 NOV 2025** - The Warehouse, Ciudad X</li>
+                <li>**15 DIC 2025** - Festival [Nombre], País Y</li>
+                <li>**31 DIC 2025** - NYE Special Set, Club Z</li>
+            </ol>
+        </section>
+ 
+
+
+
+                <section id="contacto">
+            <h2>Contacto y Contrataciones</h2>
+            <form action="submit_form.php" method="POST" class="contact-form">
+                
+                <label for="Nombre">Nombre Completo:</label>
+                <input type="text" 
+                       id="nombre" 
+                       name="nombre" 
+                       required>
+                
+                <label for="Celular">Número Celular:</label>
+                <input type="tel" 
+                       id="celular" 
+                       name="celular" required>
+                
+                <label for="contrato">Tipo de Contrato:</label>
+                <select id="contrato" 
+                        name="contrato" required>
+                    <option value="" disabled selected>Seleccione una opción</option>
+                    <option value="solo_dj">Solo DJ</option>
+                    <option value="luces_sonido">Luces y Sonido</option>
+                    <option value="paquete_completo">Paquete Completo</option>
+                </select>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" 
+                          name="mensaje" 
+                          rows="6" required></textarea>
+                
+                <button type="submit" 
+                        class="neon-button">Enviar Mensaje</button>
+            </form>
+            <p class="contact-note">Para mayor informacion contactenos al 0995496224 </p>
+        </section>
+
+
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.instagram.com/gohanonthetrack/" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://soundcloud.com/gohan-on-the-track?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing/" target="_blank" aria-label="SoundCloud">
+                <i class="fab fa-soundcloud"></i>
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f">
+

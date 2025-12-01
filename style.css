@@ -1,0 +1,272 @@
+/* ==================================== */
+/* 1. ESTILOS BASE Y TIPOGRAFÍA */
+/* ==================================== */
+body {
+    background-color: #000000;      /* Fondo negro */
+    color: #FFFFFF;                 /* Texto blanco para visibilidad */
+    font-family: 'Oswald', sans-serif; /* Fuente legible para el cuerpo */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos de Títulos */
+h1, h2, h3, h4 {
+    /* Fuente única y neón para los títulos */
+    font-family: 'Audiowide', cursive; 
+    color: #FF00FF; 
+    text-align: center;
+}
+
+h1 {
+    font-size: 48px;
+    margin: 0;
+}
+/* NUEVA REGLA para espaciar los iframes (videos/música) */
+#media iframe {
+    margin-top: 25px; 
+}
+
+/* ==================================== */
+/* 2. ENCABEZADO Y NAVEGACIÓN (HEADER/NAV) */
+/* ==================================== */
+header {
+    padding: 20px 0;
+    border-bottom: 2px solid #570057; 
+    /* Agregamos una propiedad para posicionar el reflejo */
+    position: relative; 
+    overflow: hidden; /* Asegura que el reflejo no se salga del header */
+}
+
+/* Estilo del logo principal */
+.header-logo {
+    width: 200px; 
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto; /* Centrarlo */
+    z-index: 2; /* Asegura que el logo esté por encima del reflejo */
+    position: relative; /* Necesario para que z-index funcione */
+}
+
+/* MODIFICACIÓN FINAL para asegurar que el reflejo aparezca */
+.header-logo::after {
+    content: ''; 
+    display: block;
+    width: 200px;
+    height: 100px; 
+    
+    /* RUTA Y EXTENSIÓN CORREGIDAS (.png) */
+    background-image: url("img/gohan-logo.png"); 
+    background-size: 200px auto;
+    background-position: center top; 
+    background-repeat: no-repeat;
+    
+    position: absolute;
+    top: 100%; 
+    left: 50%;
+    
+    /* Posición final y volteo */
+    transform: translateX(-50%) translateY(-10%) scaleY(-1); 
+    
+    /* Propiedades visuales simplificadas */
+    opacity: 0.4; 
+    filter: blur(1px); 
+    z-index: 1; 
+
+    /* SE ELIMINA mask-image */
+}
+/* Estilos para los enlaces */
+a {
+    color: #FF00FF;                 /* Color neón */
+    text-decoration: none;          /* Elimina el subrayado por defecto */
+    transition: color 0.3s ease;    /* Suaviza el cambio de color */
+}
+
+/* Efecto Hover */
+a:hover {
+    color: #FFFFFF;                 /* Cambia a blanco al pasar el mouse */
+    opacity: 0.8; 
+}
+
+/* Estilos de la lista de navegación */
+nav ul {
+    list-style: none;               
+    padding: 0;
+    margin: 10px 0 0 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline;                
+    margin: 0 15px;
+}
+/* ==================================== */
+/* 3. SECCIONES Y MEDIA (AJUSTE DE ESPACIADO) */
+/* ==================================== */
+main {
+    max-width: 1000px; /* Ancho máximo del contenido */
+    margin: 0 auto;    /* Centra todo el contenido de la página */
+    padding: 0 40px;   /* Incrementa el padding horizontal para evitar que se pegue a los lados */
+}
+
+section {
+    padding: 60px 0; /* Aumenta el padding vertical de las secciones (más espacio arriba/abajo) */
+    border-bottom: 1px dashed #333333;
+}
+
+/* Nota: La regla @media para móviles (600px) aún controlará el padding en pantallas pequeñas. */
+
+/* Estilo de la imagen de perfil del DJ (circular y centrada) */
+.dj-profile-pic {
+    width: 300px;
+    height: 300px; 
+    max-width: 100%; 
+    object-fit: cover;
+    border-radius: 50%; /* Hace la imagen circular */
+    display: block;
+    margin: 20px auto;
+}
+
+/* Galería de Imágenes (Flexbox para la fila) */
+.image-gallery {
+    display: flex; 
+    gap: 15px;     
+    margin-top: 20px;
+}
+
+.image-gallery img {
+    width: 33%;    
+    height: auto;
+    object-fit: cover;
+}
+
+/* ==================================== */
+/* 4. FOOTER Y REDES SOCIALES */
+/* ==================================== */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px dashed #333333;
+}
+
+.social-links a {
+    font-size: 30px; 
+    margin: 0 10px;
+    color: #FF00FF; 
+    transition: color 0.3s ease; 
+}
+
+.social-links a:hover {
+    color: #FFFFFF; 
+}
+
+/* ==================================== */
+/* 5. ESTILOS DEL FORMULARIO DE CONTACTO */
+/* ==================================== */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contact-form label, 
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #FF00FF; 
+    background-color: #1a001a; 
+    color: #FFFFFF;
+    font-family: 'Oswald', sans-serif;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    resize: vertical; 
+}
+
+/* Estilo del botón de envío */
+.neon-button {
+    background-color: #FF00FF;
+    color: #000000;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Audiowide', cursive;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.neon-button:hover {
+    background-color: #FFFFFF;
+    color: #FF00FF;
+}
+
+.contact-note {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+/* ==================================== */
+/* 6. ESTILOS DEL FORMULARIO DE CONTACTO (ACTUALIZADO) */
+/* ==================================== */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Nueva regla para darle color y tipografía neón a las etiquetas */
+.contact-form label {
+    color: #FF00FF; /* Color neón */
+    font-family: 'Audiowide', cursive; /* Fuente de título */
+    margin-bottom: 5px; 
+    display: block; /* Asegura que el label esté en su propia línea */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="tel"], /* AÑADIDO: campo tipo teléfono */
+.contact-form textarea,
+.contact-form select { 
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #FF00FF; 
+    background-color: #1a001a; 
+    color: #FFFFFF; 
+    font-family: 'Oswald', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Regla específica para el SELECT */
+.contact-form select { 
+    /* Oculta la flecha nativa del sistema operativo */
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    /* Inserta una flecha de color neón como imagen de fondo */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23FF00FF' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 8px;
+    padding-right: 30px; /* Asegura espacio para que la flecha sea visible */
+    cursor: pointer;
+}
+
+.contact-form textarea {
+    resize: vertical; 
+}
+
+/* ... el resto de las reglas del botón y nota siguen igual ... */
